@@ -7,9 +7,15 @@ let imgCollection = [
     './assets/img/06-some-temple-in-japan.jpg',
 ];
 
+const imageViewer = document.getElementById('img-viewer');
+
+function openImageViewer(){
+    imageViewer.showModal();
+}
+
 function renderImages(){
     for (let i = 1; i < imgCollection.length; i++) {
         let imgBox = document.getElementById('img-location');
-        imgBox.innerHTML += `<img class="img-thumbnail" src="${imgCollection[i]}">`;    
+        imgBox.innerHTML += `<img class="img-thumbnail" src="${imgCollection[i]}" onclick="openImageViewer()">`;    
     }
 }
