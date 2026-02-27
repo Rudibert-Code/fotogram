@@ -1,6 +1,8 @@
 body{
     margin: 0;
-    background-color : black;
+    background-color : #06171E;
+    display: flex;
+    flex-direction: column;
 }
 header{
     width: 100%;
@@ -17,6 +19,13 @@ header{
 }
 main{
     width: 100%;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+.main-content{
+    width: 100%;
     max-width: 1440px;
     padding-top: 140px;
     padding-bottom: 140px;
@@ -27,6 +36,7 @@ main{
 }
 h1{
     padding-inline: 80px;
+    padding-bottom: 80px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     text-align: center;
@@ -62,10 +72,6 @@ footer{
     align-items: center;
     border-top-left-radius: 56%;
     border-top-right-radius: 56%;
-    p{
-        font-family: Arial, Helvetica, sans-serif;
-        color: #99ACB3;
-    }
 }
 .footer-info{
     width: 100%;
@@ -74,4 +80,8 @@ footer{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    p{
+        font-family: Arial, Helvetica, sans-serif;
+        color: #99ACB3;
+    }
 }
