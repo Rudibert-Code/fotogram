@@ -14,7 +14,7 @@ function openImageViewer(){
 }
 
 function renderImages(){
-    for (let i = 1; i < imgCollection.length; i++) {
+    for (let i = 0; i < imgCollection.length; i++) {
         let imgBox = document.getElementById('img-location');
         imgBox.innerHTML += `<img class="img-thumbnail" src="${imgCollection[i]}" onclick="openImageViewer()">`;    
     }
