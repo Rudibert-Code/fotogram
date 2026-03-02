@@ -3,6 +3,8 @@ body{
     background-color : #06171E;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 header{
     width: 100%;
@@ -89,19 +91,26 @@ footer{
         color: #99ACB3;
     }
 }
-.dialog-container{
+dialog{
     padding: 0;
     outline: none;
     border: none;
-    width: 70%;
-
-    margin-inline: 64px;
+}
+.dialog-container{
+    padding-inline: 64px;
     background-color: #09212A;
-    h2{
-        font-family: Arial, Helvetica, sans-serif;
-        font-weight: bold;
-        color: white;
-    }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: white;
+}
+dialog::backdrop{
+    background-color: rgba(0, 0, 0, 0.552);
 }
 .img-container{
     height: 80%;
@@ -113,4 +122,51 @@ footer{
     width: 800px;
     object-fit: cover;
 
+}
+.dialog-header{
+    width: 100%;
+    padding-top: 16px;
+    padding-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+.dialog-exit-button{
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-image: url(./assets/button/exit.png);
+}
+.dialog-exit-button:hover{
+    background-image: url(./assets/button/exit-hover.png);
+}
+.dialog-footer{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    p{
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        color: white;
+    }
+}
+.dialog-img-button-r{
+    width: 80px;
+    height: 80px;
+    background-repeat: no-repeat;
+    background-image: url(./assets/button/switch.png);
+}
+.dialog-img-button-r:hover{
+    background-image: url(./assets/button/switch-hover.png);
+}
+.dialog-img-button-l{
+    width: 80px;
+    height: 80px;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    background-repeat: no-repeat;
+    background-image: url(./assets/button/switch.png);
+}
+.dialog-img-button-l:hover{
+    background-image: url(./assets/button/switch-hover.png);
 }

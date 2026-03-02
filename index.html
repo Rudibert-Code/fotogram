@@ -18,11 +18,19 @@
             <section id="img-location" class="img-collection">
             </section>
         </article>
-        <dialog class="dialog-container" id="img-closeup" aria-labelledby="dialoge-url">
-            <header>
-                <h2 class="dialoge-details" id="dialoge-url">image url</h2>
-            </header>
-            <section class="img-container" id="img-viewer"></section>
+        <dialog id="img-closeup">
+            <section class="dialog-container">
+                <section class="dialog-header">
+                    <h2 id="dialoge-url"></h2>
+                    <a class="dialog-exit-button" href="#" onclick="closeDialog()"></a>
+                </section>
+                <section class="dialog-main" id="dialogMain"></section>
+                <section class="dialog-footer" id="dialogFooter">
+                    <a class="dialog-img-button-l" href="#" onclick="buttonPrevious()"></a>
+                    <p class="dialog-img-number" id="dialog-img-number"></p>
+                    <a class="dialog-img-button-r" href="#" onclick="buttonNext()"></a>
+                </section>
+            </section>
         </dialog>
     </main>
     <footer>
