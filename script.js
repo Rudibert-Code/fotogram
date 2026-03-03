@@ -39,7 +39,7 @@ function processKeyEntered(key){
 
 function openDialog(number){
     dialogState = true;
-        console.log("Dialog " + dialogState)
+    console.log("Dialog " + dialogState)
     savedNumber = number;
     dialogWindow.showModal();
 
