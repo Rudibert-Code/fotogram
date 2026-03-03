@@ -17,7 +17,10 @@ header{
 .header-info{
     width: 100%;
     max-width: 1440px;
-    padding: 20px 140px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 20px 126px;
 }
 main{
     width: 100%;
@@ -31,22 +34,23 @@ main{
     max-width: 1440px;
     padding-top: 140px;
     padding-bottom: 140px;
+    padding-inline: 126px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 h1{
-    padding-inline: 80px;
-    padding-bottom: 80px;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 48px;
     font-weight: bold;
-    text-align: center;
     color: white;
+    text-align: center;
+    
+    padding-bottom: 80px;
 }
 .img-collection{
     width: 100%;
-    max-width: 1440px;
     padding-top: 20px;
     padding-bottom: 20px;
     display: flex;
@@ -73,9 +77,6 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    position: fixed;
-    left: 0;
-    bottom: 0;
     border-top-left-radius: 56%;
     border-top-right-radius: 56%;
 }
@@ -97,12 +98,12 @@ dialog{
     border: none;
 }
 .dialog-container{
-    max-height: 928px;
+    height: 780px;
     padding-inline: 64px;
     background-color: #09212A;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 h2{
@@ -120,7 +121,7 @@ dialog::backdrop{
     align-items: center;
 }
 .dialog-img{
-    max-height: 600px;
+    max-height: 560px;
     width: 800px;
     object-fit: cover;
 
@@ -145,6 +146,8 @@ dialog::backdrop{
 }
 .dialog-footer{
     width: 100%;
+    padding-top: 8px;
+    padding-bottom: 16px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -173,4 +176,49 @@ dialog::backdrop{
 }
 .dialog-img-button-l:hover{
     background-image: url(./assets/button/switch-hover.png);
+}
+@media(min-width: 1274px) {
+   footer{
+        position: fixed;
+        left: 0;
+        bottom: 0;
+   }
+}
+@media(max-width: 600px) {
+    main{
+        width: 333px;
+    }
+    .main-content{
+        padding-inline: 0px;
+    }
+}
+@media(max-width: 500px) {
+    .header-info{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-inline: 0;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}
+@media(max-width: 384px) {
+    main{
+        width: 100%;
+    }
+    h1{
+        font-size: 40px;
+        padding-bottom: 80px;
+    }
+    .img-thumbnail{
+        width: 130px;
+        height: 130px;
+    }
+    .img-collection{
+        width: 100%;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        gap: 8px;
+    }
 }
