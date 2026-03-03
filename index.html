@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Fotogram</title>
+    <link rel="icon" type="icon-fotogram" href="./assets/icon/logo-icon.png">
     <link rel="stylesheet" href="./style.css">
 </head>
 <body onload="renderImages()">
@@ -18,11 +19,11 @@
             <section id="img-location" class="img-collection">
             </section>
         </article>
-        <dialog id="img-closeup">
+        <dialog id="img-closeup" aria-labelledby="dialoge-url">
             <section class="dialog-container">
                 <section class="dialog-header">
                     <h2 id="dialoge-url"></h2>
-                    <a class="dialog-exit-button" href="#" onclick="closeDialog()"></a>
+                    <a aria-label="Exit Dialog" class="dialog-exit-button" href="#" onclick="closeDialog()"></a>
                 </section>
                 <section class="dialog-main" id="dialogMain"></section>
                 <section class="dialog-footer" id="dialogFooter">
