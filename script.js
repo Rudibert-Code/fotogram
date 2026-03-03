@@ -18,9 +18,28 @@ let imgDescription = [
 
 const dialogWindow = document.getElementById('img-closeup');
 
+document.addEventListener("keyup", processKeyEntered);
+
+let dialogState = false;
+
 let savedNumber = 0;
 
+function processKeyEntered(key){
+    if (dialogState == true) {
+        console.log(key);
+        if (key == "ArrowRight") {
+            buttonNext();
+        } else if(key == "ArrowLeft"){
+            buttonPrevious();
+        } else if(key == "Escape"){
+            closeDialog();
+        }
+    }
+}
+
 function openDialog(number){
+    dialogState = true;
+        console.log("Dialog " + dialogState)
     savedNumber = number;
     dialogWindow.showModal();
 
@@ -41,6 +60,8 @@ function openDialog(number){
 }
 
 function closeDialog(){
+    dialogState = false;
+    console.log("Dialog " + dialogState)
     dialogWindow.close();
 }
 
