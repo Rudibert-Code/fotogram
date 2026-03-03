@@ -26,12 +26,12 @@ let savedNumber = 0;
 
 function processKeyEntered(key){
     if (dialogState == true) {
-        console.log(key);
-        if (key == "ArrowRight") {
+        console.log(key); 
+        if (key.key == "ArrowRight") {
             buttonNext();
-        } else if(key == "ArrowLeft"){
+        } else if(key.key == "ArrowLeft"){
             buttonPrevious();
-        } else if(key == "Escape"){
+        } else if(key.key == "Escape"){
             closeDialog();
         }
     }

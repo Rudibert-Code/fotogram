@@ -97,6 +97,7 @@ dialog{
     border: none;
 }
 .dialog-container{
+    max-height: 928px;
     padding-inline: 64px;
     background-color: #09212A;
     display: flex;
@@ -119,6 +120,7 @@ dialog::backdrop{
     align-items: center;
 }
 .dialog-img{
+    max-height: 600px;
     width: 800px;
     object-fit: cover;
 
@@ -134,6 +136,8 @@ dialog::backdrop{
     width: 40px;
     height: 40px;
     background-repeat: no-repeat;
+    outline: none;
+    border: none;
     background-image: url(./assets/button/exit.png);
 }
 .dialog-exit-button:hover{
