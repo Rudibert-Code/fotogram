@@ -125,7 +125,6 @@ dialog::backdrop{
     max-height: 560px;
     width: 800px;
     object-fit: cover;
-
 }
 .dialog-header{
     width: 100%;
@@ -264,5 +263,8 @@ dialog::backdrop{
         padding-top: 16px;
         padding-bottom: 16px;
         gap: 8px;
+    }
+    .dialog-img{
+        object-fit: contain;
     }
 }

@@ -17,11 +17,8 @@ let imgDescription = [
 ];
 
 const dialogWindow = document.getElementById('img-closeup');
-
 document.addEventListener("keyup", processKeyEntered);
-
 let dialogState = false;
-
 let savedNumber = 0;
 
 function processKeyEntered(key){
@@ -43,16 +40,13 @@ function openDialog(number){
     savedNumber = number;
     dialogWindow.showModal();
 
-    // define dialog title (h2)
     let dialogTitle = document.getElementById('dialoge-url');
     dialogTitle.innerHTML = "";
     dialogTitle.innerHTML = imgCollection[number];
 
-    // define dialog image
     let dialogImage = document.getElementById('dialogMain');
     dialogImage.innerHTML = `<img aria-haspopup="dialog" aria-controls="img-closeup" class="dialog-img" src="${imgCollection[number]}" alt="imgDescription('${[number]}')">`;
 
-    // define image number
     let dialogImgNumber = document.getElementById('dialog-img-number');
     dialogImgNumber.innerHTML = "";
     number++
@@ -82,16 +76,13 @@ function buttonNext(){
         number = 0;
     }
 
-    // define dialog title (h2)
     let dialogTitle = document.getElementById('dialoge-url');
     dialogTitle.innerHTML = "";
     dialogTitle.innerHTML = imgCollection[number];
 
-    // define dialog image
     let dialogImage = document.getElementById('dialogMain');
     dialogImage.innerHTML = `<img aria-haspopup="dialog" aria-controls="img-closeup" class="dialog-img" src="${imgCollection[number]}" alt="${imgDescription[number]}">`;
 
-    // define image number
     let dialogImgNumber = document.getElementById('dialog-img-number');
     dialogImgNumber.innerHTML = "";
     savedNumber = number;
@@ -110,16 +101,13 @@ function buttonPrevious(){
         number = i;
     }
 
-    // define dialog title (h2)
     let dialogTitle = document.getElementById('dialoge-url');
     dialogTitle.innerHTML = "";
     dialogTitle.innerHTML = imgCollection[number];
 
-    // define dialog image
     let dialogImage = document.getElementById('dialogMain');
     dialogImage.innerHTML = `<img class="dialog-img" src="${imgCollection[number]}" alt="${imgDescription[number]}">`;
 
-    // define image number
     let dialogImgNumber = document.getElementById('dialog-img-number');
     dialogImgNumber.innerHTML = "";
     savedNumber = number;
